@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .result {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px 0;
+        }
+        .result strong {
+            color: #007BFF;
+        }
+        #answers {
+            white-space: pre-wrap; /* Maintains formatting for JSON */
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Your Score</h1>
+    <div class="result" id="answers"></div>
+    <div class="result" id="count"></div>
+
+    <div class="button-container">
+        <a href="index.html" class="button">Back to Quiz</a>
+    </div>
+
+    <script>
+        
+        const answers = JSON.parse(localStorage.getItem('answers')) || {};
+        const count = localStorage.getItem('count') || 0;
+
+        
+        const answersDiv = document.getElementById('answers');
+        answersDiv.innerHTML = `<strong>Answers:</strong><br>${JSON.stringify(answers, null, 2)}`;
+
+       
+        const countDiv = document.getElementById('count');
+        countDiv.innerHTML = `<strong>Your Score:</strong> ${count}/10`;
+
+      
+        localStorage.removeItem('answers');
+        localStorage.removeItem('count');
+    </script>
+
+</body>
+</html>

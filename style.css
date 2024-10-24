@@ -1,0 +1,57 @@
+body{
+    background-color: bisque;
+    background-image:url("Screenshot\ 2024-10-24\ 165935.png");
+    background-size:cover;
+
+    
+
+}
+h1{
+    padding: 20px;
+}
+.innercontainer{
+    display: grid;
+    grid-template-columns: repeat(2,500px);
+    gap: 10px;
+    width: 200px;
+}
+.innercontainer1{
+    display: grid;
+    grid-template-columns: repeat(2,500px);
+    gap: 10px;
+    width: 200px;
+}
+
+.option1{
+    padding: 10px;
+    background-color: azure;
+    border-radius: 40px;
+}
+.option1:hover{
+    border: 2px solid black;
+}
+
+.option2{
+    padding: 10px;
+    background-color: azure;
+    border-radius: 40px;
+}
+.option2:hover{
+    border: 2px solid black;
+}
+.option3{
+    padding: 10px;
+    background-color: azure;
+    border-radius: 40px;
+}
+.option3:hover{
+    border: 2px solid black;
+}
+.option4{
+    padding: 10px;
+    background-color: azure;
+    border-radius: 40px;
+}
+.option4:hover{
+    border: 2px solid black;
+}
